@@ -8,17 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		E9067DB528F85BFC00E20D47 /* Breaking_BadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9067DB428F85BFC00E20D47 /* Breaking_BadApp.swift */; };
-		E9067DB728F85BFC00E20D47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9067DB628F85BFC00E20D47 /* ContentView.swift */; };
+		E9067DB728F85BFC00E20D47 /* BBCharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9067DB628F85BFC00E20D47 /* BBCharactersListView.swift */; };
 		E9067DB928F85BFE00E20D47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9067DB828F85BFE00E20D47 /* Assets.xcassets */; };
 		E9067DBC28F85BFE00E20D47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9067DBB28F85BFE00E20D47 /* Preview Assets.xcassets */; };
+		E9067DC328F85C7000E20D47 /* BBCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9067DC228F85C7000E20D47 /* BBCharacter.swift */; };
+		E9067DC728F8605D00E20D47 /* FetchBBCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9067DC628F8605D00E20D47 /* FetchBBCharacter.swift */; };
+		E9067DCA28F8616D00E20D47 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E9067DC928F8616D00E20D47 /* SDWebImageSwiftUI */; };
+		E9067DCC28F8648900E20D47 /* BBCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9067DCB28F8648900E20D47 /* BBCharacterView.swift */; };
+		E9067DCE28F8665900E20D47 /* BBCharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9067DCD28F8665900E20D47 /* BBCharacterRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E9067DB128F85BFC00E20D47 /* Breaking Bad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breaking Bad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9067DB428F85BFC00E20D47 /* Breaking_BadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breaking_BadApp.swift; sourceTree = "<group>"; };
-		E9067DB628F85BFC00E20D47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9067DB628F85BFC00E20D47 /* BBCharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCharactersListView.swift; sourceTree = "<group>"; };
 		E9067DB828F85BFE00E20D47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9067DBB28F85BFE00E20D47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9067DC228F85C7000E20D47 /* BBCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCharacter.swift; sourceTree = "<group>"; };
+		E9067DC628F8605D00E20D47 /* FetchBBCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBBCharacter.swift; sourceTree = "<group>"; };
+		E9067DCB28F8648900E20D47 /* BBCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCharacterView.swift; sourceTree = "<group>"; };
+		E9067DCD28F8665900E20D47 /* BBCharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCharacterRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9067DCA28F8616D00E20D47 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +62,11 @@
 			isa = PBXGroup;
 			children = (
 				E9067DB428F85BFC00E20D47 /* Breaking_BadApp.swift */,
-				E9067DB628F85BFC00E20D47 /* ContentView.swift */,
+				E9067DC228F85C7000E20D47 /* BBCharacter.swift */,
+				E9067DC628F8605D00E20D47 /* FetchBBCharacter.swift */,
+				E9067DB628F85BFC00E20D47 /* BBCharactersListView.swift */,
+				E9067DCD28F8665900E20D47 /* BBCharacterRow.swift */,
+				E9067DCB28F8648900E20D47 /* BBCharacterView.swift */,
 				E9067DB828F85BFE00E20D47 /* Assets.xcassets */,
 				E9067DBA28F85BFE00E20D47 /* Preview Content */,
 			);
@@ -83,6 +97,9 @@
 			dependencies = (
 			);
 			name = "Breaking Bad";
+			packageProductDependencies = (
+				E9067DC928F8616D00E20D47 /* SDWebImageSwiftUI */,
+			);
 			productName = "Breaking Bad";
 			productReference = E9067DB128F85BFC00E20D47 /* Breaking Bad.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = E9067DA828F85BFC00E20D47;
+			packageReferences = (
+				E9067DC828F8616D00E20D47 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = E9067DB228F85BFC00E20D47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9067DB728F85BFC00E20D47 /* ContentView.swift in Sources */,
+				E9067DC328F85C7000E20D47 /* BBCharacter.swift in Sources */,
+				E9067DCC28F8648900E20D47 /* BBCharacterView.swift in Sources */,
+				E9067DCE28F8665900E20D47 /* BBCharacterRow.swift in Sources */,
+				E9067DC728F8605D00E20D47 /* FetchBBCharacter.swift in Sources */,
+				E9067DB728F85BFC00E20D47 /* BBCharactersListView.swift in Sources */,
 				E9067DB528F85BFC00E20D47 /* Breaking_BadApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9067DC828F8616D00E20D47 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9067DC928F8616D00E20D47 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9067DC828F8616D00E20D47 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9067DA928F85BFC00E20D47 /* Project object */;
 }
