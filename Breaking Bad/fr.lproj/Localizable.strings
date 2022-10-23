@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  Breaking Bad
+
+  Created by Louis Vedel on 21/10/2022.
+*/
+
+/* Label for actor */
+"actor" = "Acteur";
+
+/* Label for birthday */
+"birthday" = "Anniversaire";
+
+/* Label for death section */
+"death-title" = "Informations sur le décès";
+
+/* Label for death responsible */
+"death-responsible" = "Responsable";
+
+/* Label for death cause */
+"death-cause" = "Cause";
+
+/* Label for death last words */
+"death-last_words" = "Derniers mots";
+
+/* Text when list load failed */
+"failed" = "Echec du chargement des personnages.";
+
+/* Text while load list */
+"loading" = "Chargement…";
+
+/* Label for nickname */
+"nickname" = "Nickname";
+
+/* Label when character does not have death information */
+"no-death-info" = "Aucune information sur le décès.";
+
+/* Label when character does not have an occupation */
+"no-occupation" = "Pas d'occupation connue";
+
+/* Button to try to reload list */
+"retry" = "Réessayer";
+
+/* Label for status */
+"status" = "Status";

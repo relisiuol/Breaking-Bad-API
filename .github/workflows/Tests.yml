@@ -1,0 +1,36 @@
+name: Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  tests:
+    runs-on: macos-12
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run Breaking Bad Tests
+        id: tests
+        run: |
+          set -o pipefail
+          sudo xcode-select -s /Applications/Xcode_$(cat .xcode-version).app/Contents/Developer
+          xcodebuild CODE_SIGN_IDENTITY="" AD_HOC_CODE_SIGNING_ALLOWED=YES -project 'Breaking Bad.xcodeproj' -scheme 'Breaking Bad' -destination 'platform=iOS Simulator,name=iPhone 14 Pro Max' test | xcpretty
+
+      - name: Locate Tests Results
+        if: failure()
+        id: results
+        run: |
+          cd /Users/runner/Library/Developer/Xcode/DerivedData/Breaking_Bad-*/Logs/Test
+          echo "::set-output name=path::$PWD"
+
+      - name: Upload Tests Results
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: Breaking_Bad-Tests.xcresult
+          path: ${{ steps.results.outputs.path }}/*.xcresult

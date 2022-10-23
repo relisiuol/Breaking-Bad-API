@@ -15,10 +15,8 @@ final class BBCharacter: Codable, Identifiable {
     public let img: String
     public let status: String
     public let nickname: String
-    public let appearance: [Int]
     public let portrayed: String
     public let category: String
-    public let better_call_saul_appearance: [Int]
 
     enum CodingKeys: String, CodingKey {
         case id = "char_id",
@@ -28,9 +26,7 @@ final class BBCharacter: Codable, Identifiable {
              img,
              status,
              nickname,
-             appearance,
              portrayed,
-             category,
-             better_call_saul_appearance
+             category
     }
 }
